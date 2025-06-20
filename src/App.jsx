@@ -14,10 +14,12 @@ import {
 } from "lucide-react";
 
 // Importando as imagens
-import doraIllustration from "./assets/dora-illustration.jpg";
-import doraDashboard from "./assets/dora-dashboard.png";
+import doraMetricsBanner from "./assets/dora-metric-banner.png";
+import doraMetricsTable from "./assets/metrics-table.png";
 import elvenLogo from "./assets/elven-logo.svg";
 import elvenLogoFooter from "./assets/elven-logo-footer.svg";
+import metrisUser from "./assets/metrics-users.png";
+import elvenShildBackground from "./assets/elven-shild-background.png";
 import CorrectGear from "./components/icons/CorrectGear";
 import Memories from "./components/icons/Memories";
 import Monitor from "./components/icons/Monitor";
@@ -26,6 +28,7 @@ import GitHub from "./components/icons/Github";
 import Idea from "./components/icons/Idea";
 import ElvenShield from "./components/icons/ElvenShield";
 import Statistic from "./components/icons/Statistic";
+import CorrectShild from "./components/icons/CorrectShild";
 
 const Button = ({
   children,
@@ -106,9 +109,9 @@ const ExpandedSection = ({
         <h3 className="text-2xl font-semibold txt-primary">{title}</h3>
 
         {open ? (
-          <ChevronUp className="w-5 h-5 text-gray-500" />
+          <ChevronUp className="w-5 h-5 txt-primary-light" />
         ) : (
-          <ChevronDown className="w-5 h-5 text-gray-500" />
+          <ChevronDown className="w-5 h-5 txt-primary-light" />
         )}
       </div>
       <div
@@ -130,13 +133,13 @@ const Header = () => {
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           {/* Logo da Elven */}
-          <div className="flex items-center">
+          <a href="#home" className="flex items-center">
             <img
               src={elvenLogo}
               alt="Elven DORA Metrics"
               className="h-10 w-auto"
             />
-          </div>
+          </a>
 
           {/* Menu de navegação */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -160,28 +163,30 @@ const Header = () => {
                 )}
               </button>
 
-              {isDoraDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50">
-                  <a
-                    href="#metrics"
-                    className="block px-4 py-2 text-sm txt-primary hover:bg-gray-50"
-                  >
-                    O que são DORA Metrics
-                  </a>
-                  <a
-                    href="#benefits"
-                    className="block px-4 py-2 text-sm txt-primary hover:bg-gray-50"
-                  >
-                    Benefícios
-                  </a>
-                  <a
-                    href="#results"
-                    className="block px-4 py-2 text-sm txt-primary hover:bg-gray-50"
-                  >
-                    Resultados
-                  </a>
-                </div>
-              )}
+              <div
+                className={`absolute transition-all ease-in-out ${
+                  isDoraDropdownOpen ? "max-h-[500px] py-2" : "max-h-0 py-0"
+                }  overflow-hidden top-full -left-10 mt-1 w-lg bg-primary-light rounded-sm z-50`}
+              >
+                <a
+                  href="#metrics"
+                  className="block px-6 py-2 text-base font-button txt-primary hover:bg-gray-200"
+                >
+                  O que são DORA Metrics
+                </a>
+                <a
+                  href="#benefits"
+                  className="block px-6 py-2 text-base font-button txt-primary hover:bg-gray-200"
+                >
+                  Por que adotar as DORA Metrics com a Elven?
+                </a>
+                <a
+                  href="#results"
+                  className="block px-6 py-2 text-base font-button txt-primary hover:bg-gray-200"
+                >
+                  Resultados que você pode esperar
+                </a>
+              </div>
             </div>
 
             {/* Link Dúvidas */}
@@ -208,11 +213,14 @@ const Header = () => {
 
 const HeroSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-[#F5F0FF] to-[#FBFBFB]">
-      <div className="container mx-auto px-4">
+    <section
+      id="home"
+      className="py-12 lg:py-1 bg-gradient-to-br from-[#F5F0FF] to-[#FBFBFB]"
+    >
+      <div className="container mx-auto px-6 lg:px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
+            <div className="space-y-6 lg:space-y-8">
               <div className="bg-secondary-light p-2.5 inline-block rounded-4xl">
                 <p className="txt-secondary font-button font-semibold text-sm">
                   DORA Metrics
@@ -224,7 +232,7 @@ const HeroSection = () => {
               </h1>
               <p className="text-2xl txt-primary-light font-light">
                 As quatro métricas que ajudam times de engenharia a liderar a{" "}
-                <b className="txt-secondary">
+                <b className="txt-secondary font-medium">
                   medir performance, identificar gargalos e acelerar entregas
                   com confiabilidade
                 </b>
@@ -232,32 +240,18 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <Button size="lg" className="text-lg px-8 py-4">
+            <Button size="lg" className="text-lg px-8 py-4 mx-auto lg:mx-0">
               Começar grátis
             </Button>
           </div>
 
           <div className="relative">
-            {/* Usando a imagem real como base e adicionando elementos por cima */}
-            <div className="relative rounded-3xl overflow-hidden">
+            <div className="relative overflow-hidden -right-10">
               <img
-                src={doraIllustration}
+                src={doraMetricsBanner}
                 alt="DORA Metrics Illustration"
-                className="w-full h-auto rounded-3xl"
+                className="w-full h-auto"
               />
-              {/* Overlay com elementos adicionais para ficar mais próximo do original */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-3xl"></div>
-
-              {/* Elementos decorativos adicionais */}
-              <div className="absolute top-8 right-8 w-16 h-16 bg-purple-400/30 rounded-full animate-pulse"></div>
-              <div className="absolute bottom-8 left-8 w-12 h-12 bg-purple-500/40 rounded-lg rotate-12"></div>
-
-              {/* Ícone central */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg animate-bounce">
-                  <BarChart3 className="w-8 h-8 text-white" />
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -271,22 +265,22 @@ const MetricsSection = () => {
     {
       icon: <CorrectGear />,
       title: "Deployment Frequency",
-      description: "Quantas vezes por dia sua equipe faz deploy",
+      description: "Quantas vezes seu time entrega software com sucesso.",
     },
     {
       icon: <Memories />,
       title: "Lead Time for Changes",
-      description: "Quanto tempo uma ideia leva para chegar em produção",
+      description: "Quanto tempo leva para uma mudança ir do commit ao deploy.",
     },
     {
       icon: <Rocket />,
       title: "Change Failure Rate",
-      description: "% de falhas que resultam em degradação de serviço",
+      description: "O quão rápido você consegue se recuperar de uma falha.",
     },
     {
       icon: <Monitor />,
       title: "Time to Restore Service",
-      description: "Qual o tempo de se recuperar de uma falha",
+      description: "Qual o percentual de deploys que causam incidentes.",
     },
   ];
 
@@ -354,7 +348,7 @@ const BenefitsSection = () => {
       description: "Compare sua performance com padrões da indústria",
     },
     {
-      icon: <Shield className="w-10 h-10" fill="#fff" />,
+      icon: <CorrectShild />,
       title: "Suporte de especialistas",
       description: "Orientação de especialistas em engenharia de software",
     },
@@ -389,7 +383,9 @@ const BenefitsSection = () => {
               <h3 className="text-lg font-semibold text-white">
                 {benefit.title}
               </h3>
-              <p className="text-purple-100 text-sm">{benefit.description}</p>
+              <p className="text-purple-100 text-base font-light">
+                {benefit.description}
+              </p>
             </Card>
           ))}
         </div>
@@ -409,54 +405,48 @@ const ResultsSection = () => {
 
   return (
     <section id="results" className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mt-20 mb-20">
+        <div className="flex items-center flex-col space-y-4 mb-20 lg:mb-36">
+          <h2 className="text-3xl lg:text-4xl text-center font-bold txt-primary">
+            Resultados que você pode esperar
+          </h2>
+          <p className="text-2xl text-center font-light max-w-4xl txt-primary-light">
+            Acompanhe a performance em tempo real com métricas objetivas. Tenha
+            visibilidade do que está funcionando e onde ajustar.
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold txt-primary">
-                Resultados que você pode esperar
-              </h2>
-              <p className="text-lg txt-primary-light">
-                Acompanhe a performance em tempo real com métricas objetivas.
-                Tenha visibilidade do que está funcionando e onde ajustar.
-              </p>
-            </div>
-
-            <div className="relative space-y-3">
+            <div className="relative space-y-6 lg:flex lg:flex-col lg:items-center">
               <div className="absolute w-full h-full rounded-full filter blur-2xl bg-[#EDE5FF]" />
               {results.map((result, index) => (
                 <div
                   key={index}
-                  className="bg-white p-4 rounded-4xl flex items-center space-x-3 relative z-10"
+                  className="bg-white p-4 rounded-4xl lg:max-w-lg lg:min-w-lg flex items-center space-x-3 relative z-10"
                 >
                   <div className="w-8 h-8 bg-[#6451BF] rounded-full font-base flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-4 h-4 text-white" strokeWidth={4} />
                   </div>
-                  <p className="txt-primary text-sm">{result}</p>
+                  <p className="txt-primary text-base">{result}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="relative">
-            {/* Usando a imagem real do dashboard */}
-            <Card className="p-6 space-y-4 overflow-hidden">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    Deploy Traffic
-                  </h3>
-                  <div className="text-xs text-gray-500">Últimos 5 meses</div>
-                </div>
-                <div className="rounded-lg overflow-hidden">
-                  <img
-                    src={doraDashboard}
-                    alt="DORA Dashboard"
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-            </Card>
+          <div className="h-full w-full flex flex-col items-center">
+            <div className="w-full lg:w-4/5 relative h-full">
+              <img
+                src={metrisUser}
+                alt="DORA Dashboard"
+                className="left-0 -top-1/12 z-10 w-full lg:w-auto lg:absolute"
+              />
+              <img
+                src={doraMetricsTable}
+                alt="DORA Dashboard"
+                className="bottom-0 right-0 z-0 w-full lg:w-auto lg:absolute"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -496,10 +486,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section
-      id="faq"
-      className="py-16 bg-gradient-to-br from-gray-50 to-purple-50"
-    >
+    <section id="faq" className="py-16 bg-gradient-to-br">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold txt-primary">
@@ -514,7 +501,9 @@ const FAQSection = () => {
               title={faq.question}
               content={faq.answer}
               open={openIndex === index}
-              onClick={() => setOpenIndex(index)}
+              onClick={() =>
+                openIndex === index ? setOpenIndex(null) : setOpenIndex(index)
+              }
             />
           ))}
         </div>
@@ -526,29 +515,31 @@ const FAQSection = () => {
 const CTASection = () => {
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="bg-gradient-to-r from-[#6351BE] to-[#1D105D] rounded-2xl text-center space-y-6 text-white relative overflow-hidden p-12">
-          {/* Elementos de fundo decorativos */}
-          <div className="absolute inset-0 bg-black/10"></div>
-          <div className="absolute top-8 right-8 w-32 h-32 bg-white/5 rounded-full"></div>
-          <div className="absolute bottom-8 left-8 w-24 h-24 bg-white/5 rounded-lg rotate-12"></div>
-
-          <div className="relative z-10 space-y-6">
-            <h2 className="text-3xl lg:text-4xl font-bold">
+      <div className="container flex flex-col items-center mx-auto my-auto px-4">
+        <div className="relative p-20 bg-gradient-to-r from-[#6351BE] to-[#1D105D] rounded-2xl text-white overflow-hidden text-center lg:text-left">
+          <div className="lg:max-w-2/4 relative z-10 space-y-6">
+            <h2 className="text-3xl  lg:text-4xl font-bold">
               Dê o primeiro passo rumo à alta performance
             </h2>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
+            <p className="text-2xl font-light ">
               Comece agora a visualizar suas métricas de engenharia com clareza
               e dados em tempo real.
             </p>
             <Button
               variant="secondary"
               size="lg"
-              className="bg-white txt-secondary hover:bg-gray-50"
+              className="bg-white txt-secondary hover:bg-gray-50 "
             >
               Começar grátis
             </Button>
           </div>
+
+          <img
+            src={elvenShildBackground}
+            alt="Elven DORA Metrics shild"
+            aria-hidden="true"
+            className="hidden lg:block lg:absolute lg:bottom-0 lg:right-0 lg:w-auto z-0 pointer-events-none"
+          />
         </div>
       </div>
     </section>
@@ -601,6 +592,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={link.href}
+                    target="_blank"
                     className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
                   >
                     {link.icon}
@@ -612,7 +604,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="text-purple-200 text-sm font-button">
+          <p className="text-purple-200 font-light text-base font-button">
             © 2024-2025 Elven. Todos os direitos reservados.
           </p>
         </div>
