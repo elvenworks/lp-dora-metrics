@@ -9,6 +9,7 @@ import ResultsSection from "./components/layouts/ResultsSection";
 import FAQSection from "./components/layouts/FAQSection";
 import CTASection from "./components/layouts/CTASection";
 import Footer from "./components/layouts/Footer";
+import PriceSection from "./components/layouts/PriceSection";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <MetricsSection />
       <BenefitsSection />
       <ResultsSection />
+      <PriceSection />
       <FAQSection />
       <CTASection />
       <Footer />

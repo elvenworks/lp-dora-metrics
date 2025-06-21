@@ -67,7 +67,13 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Link Dúvidas */}
+            <a
+              href="#price"
+              className="font-button leading-[1.2] txt-primary hover:text-gray-900 transition-colors font-semibold"
+            >
+              Preços
+            </a>
+
             <a
               href="#faq"
               className="font-button leading-[1.2] txt-primary hover:text-gray-900 transition-colors font-semibold"
