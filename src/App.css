@@ -3,7 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
+@theme {
+  --font-display: "Helvetica", "sans-serif";
+  --font-display-light: "Helvetica Light", "sans-serif";
+  --font-button: "Roboto", "sans-serif";
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -119,6 +122,34 @@
   }
 }
 
+.bg-primary {
+  background-color: rgba(59, 44, 135, 1);
+}
+
+.bg-primary-light {
+  background-color: rgba(251, 247, 255, 1);
+}
+
+.bg-secondary-light {
+  background-color: rgba(240, 227, 255, 1);
+}
+
+.txt-primary {
+  color: #2d2d2d;
+}
+
+.txt-primary-light {
+  color: rgba(81, 81, 81, 1);
+}
+
+.txt-secondary {
+  color: rgba(95, 76, 186, 1);
+}
+
+.border-color-primary {
+  border-color: rgba(217, 217, 217, 1);
+}
+
 /* Custom styles for DORA Metrics landing page - Mais fiel ao original */
 .card-hover {
   transition: all 0.3s ease;
@@ -126,16 +157,8 @@
 
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
-}
-
-/* Cores mais próximas do original */
-.bg-primary {
-  background-color: #6366f1;
-}
-
-.text-primary {
-  color: #6366f1;
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1),
+    0 4px 6px -2px rgb(0 0 0 / 0.05);
 }
 
 .border-primary {
@@ -154,8 +177,12 @@
 }
 
 /* Estilo específico para os cards roxos da seção de benefícios */
-.bg-primary {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+.bg-primary-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(100, 82, 191, 1) 0%,
+    rgba(64, 46, 157, 1) 100%
+  );
 }
 
 /* Ajustes para o hero section */
@@ -170,4 +197,3 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-

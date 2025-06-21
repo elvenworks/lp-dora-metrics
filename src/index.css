@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-range {
+  appearance: none;
+  height: 8px;
+  background: linear-gradient(to right, #6452bf 50%, #d9d9d980 50%);
+  border-radius: 9999px;
+  outline: none;
+}
+
+.custom-range::-webkit-slider-thumb {
+  appearance: none;
+  height: 1.25rem;
+  width: 1.25rem;
+  background: white;
+  border: 3px solid #6452bf;
+  border-radius: 9999px;
+  cursor: pointer;
+  margin-top: -0.2rem;
+}
+
+.custom-range::-moz-range-thumb {
+  height: 1.25rem;
+  width: 1.25rem;
+  background: white;
+  border: 3px solid #6452bf;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.custom-range::-webkit-slider-runnable-track {
+  height: 0.75rem;
+  border-radius: 9999px;
+  background: transparent;
+}
+
+/* Firefox */
+.custom-range::-moz-range-track {
+  height: 0.75rem;
+  border-radius: 9999px;
+}
