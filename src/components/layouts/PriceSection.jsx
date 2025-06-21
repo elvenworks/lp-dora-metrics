@@ -9,12 +9,18 @@ import { useEffect } from "react";
 export default function PriceSection() {
   const [hightAvailability, setHightAvailability] = useState(false);
 
-  const USD_COST = 5.51;
+  const USD_COST = Number(import.meta.env.VITE_USD_COST) || 5.51;
 
-  const REPOSITORY_VALUE_USD = 10;
-  const USERS_CONECTED_VALUE_USD = 10;
-  const SYNC_VALUE_USD = 10;
-  const HIGH_AVAILABILITY_MULTIPLY = 2;
+  const REPOSITORY_VALUE_USD =
+    Number(import.meta.env.VITE_REPOSITORY_VALUE_USD) || 10;
+
+  const USERS_CONECTED_VALUE_USD =
+    Number(import.meta.env.VITE_USERS_CONECTED_VALUE_USD) || 10;
+
+  const SYNC_VALUE_USD = Number(import.meta.env.VITE_SYNC_VALUE_USD) || 10;
+
+  const HIGH_AVAILABILITY_MULTIPLY =
+    Number(import.meta.env.VITE_HIGH_AVAILABILITY_MULTIPLY) || 2;
 
   const [numbersRepository, setNumberRepository] = useState(98);
   const [totalRepository, setTotalRepository] = useState(
@@ -67,7 +73,13 @@ export default function PriceSection() {
       (hightAvailability ? HIGH_AVAILABILITY_MULTIPLY : 1);
 
     setTotal(newTotal);
-  }, [totalRepository, totalUsersConected, totalSync, hightAvailability]);
+  }, [
+    totalRepository,
+    totalUsersConected,
+    totalSync,
+    hightAvailability,
+    HIGH_AVAILABILITY_MULTIPLY,
+  ]);
 
   return (
     <section id="price">
