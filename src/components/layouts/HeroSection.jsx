@@ -30,7 +30,11 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <Button size="lg" className="text-lg px-8 py-4 mx-auto lg:mx-0">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-4 mx-auto lg:mx-0"
+              whatsapp
+            >
               Solicite uma demo
             </Button>
           </div>

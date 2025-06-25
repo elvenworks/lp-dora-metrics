@@ -253,6 +253,7 @@ export default function PriceSection() {
               <Button
                 size="sm"
                 className="text-lg px-8 w-full py-4 mx-auto lg:mx-0"
+                whatsapp
               >
                 Solicitar orçamento
               </Button>

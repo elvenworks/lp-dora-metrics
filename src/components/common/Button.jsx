@@ -3,6 +3,7 @@ export default function Button({
   variant = "primary",
   size = "md",
   className = "",
+  whatsapp = false, // Nova prop para indicar se é um botão do WhatsApp
   ...props
 }) {
   const baseClasses =
@@ -23,9 +24,21 @@ export default function Button({
     lg: "px-8 py-4 text-lg",
   };
 
+  const handleWhatsAppClick = () => {
+    // Número de telefone da equipe de vendas (substitua pelo número correto)
+    const phoneNumber = '5511991266175'; // Exemplo: 55 (Brasil) + DDD + número
+    // Mensagem padrão (opcional)
+    const message = 'Olá, gostaria de solicitar a demo ou orçamento do Elven Dora metrics!';
+    // Cria a URL do WhatsApp
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    // Abre em uma nova aba
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <button
       className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
+      onClick={whatsapp ? handleWhatsAppClick : props.onClick}
       {...props}
     >
       {children}
