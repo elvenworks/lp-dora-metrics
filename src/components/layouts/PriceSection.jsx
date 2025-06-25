@@ -11,8 +11,12 @@ export default function PriceSection() {
 
   const USD_COST = Number(import.meta.env.VITE_USD_COST) || 5.51;
 
+  const REPOSITORY_VALUE_BASE_USD = 21;
+
   const REPOSITORY_VALUE_USD =
     Number(import.meta.env.VITE_REPOSITORY_VALUE_USD) || 10;
+
+  const USERS_CONECTED_VALUE_BASE_USD = 23;  
 
   const USERS_CONECTED_VALUE_USD =
     Number(import.meta.env.VITE_USERS_CONECTED_VALUE_USD) || 10;
@@ -22,41 +26,41 @@ export default function PriceSection() {
   const HIGH_AVAILABILITY_MULTIPLY =
     Number(import.meta.env.VITE_HIGH_AVAILABILITY_MULTIPLY) || 2;
 
-  const [numbersRepository, setNumberRepository] = useState(98);
+  const [numbersRepository, setNumberRepository] = useState(1);
   const [totalRepository, setTotalRepository] = useState(
-    REPOSITORY_VALUE_USD * 98
+    (REPOSITORY_VALUE_BASE_USD + (REPOSITORY_VALUE_USD * 1)) * 1.5
   );
 
-  const [usersConected, setUsersConected] = useState(15);
+  const [usersConected, setUsersConected] = useState(1);
   const [totalUsersConected, setTotalUsersConected] = useState(
-    USERS_CONECTED_VALUE_USD * 15
+    ((USERS_CONECTED_VALUE_BASE_USD + USERS_CONECTED_VALUE_USD * 1) * 1.5)
   );
 
-  const [numbersSync, setNumbersSync] = useState(3);
-  const [totalSync, setTotalSync] = useState(SYNC_VALUE_USD * 3);
+  const [numbersSync, setNumbersSync] = useState(1);
+  const [totalSync, setTotalSync] = useState((SYNC_VALUE_USD * 1) * 1.5);
 
   const [total, setTotal] = useState(2500);
 
-  const MAX_REPOSITORY = 200;
-  const MAX_USERS = 50;
+  const MAX_REPOSITORY = 500;
+  const MAX_USERS = 100;
   const MAX_SYNC = 5;
 
   const handleNumbersRepository = (e) => {
     const value = e.target.value;
     setNumberRepository(Number(value));
-    setTotalRepository(REPOSITORY_VALUE_USD * Number(value));
+    setTotalRepository((REPOSITORY_VALUE_BASE_USD + (REPOSITORY_VALUE_USD * Number(value))) * 1.5);
   };
 
   const handleUsersConected = (e) => {
     const value = e.target.value;
     setUsersConected(Number(value));
-    setTotalUsersConected(USERS_CONECTED_VALUE_USD * Number(value));
+    setTotalUsersConected((USERS_CONECTED_VALUE_BASE_USD + (USERS_CONECTED_VALUE_USD * Number(value))) * 1.5);
   };
 
   const handleNumbersSync = (e) => {
     const value = e.target.value;
     setNumbersSync(Number(value));
-    setTotalSync(SYNC_VALUE_USD * Number(value));
+    setTotalSync((SYNC_VALUE_USD * Number(value)) * 1.5);
   };
 
   const financial = (value) => {
@@ -107,7 +111,7 @@ export default function PriceSection() {
               <div>
                 <div className="flex flex-row items-center justify-between">
                   <p className="text-base txt-primary">
-                    Precisa de alta disponibilidade?
+                    Escolha sua disponibilidade de SLA
                   </p>
                 </div>
 
@@ -118,7 +122,7 @@ export default function PriceSection() {
                       value={hightAvailability}
                       onChange={() => setHightAvailability(true)}
                     />
-                    <label className="h-full font-base">Sim</label>
+                    <label className="h-full font-base">99,5%</label>
                   </div>
 
                   <div className="flex flex-row items-center space-x-2">
@@ -127,7 +131,7 @@ export default function PriceSection() {
                       value={!hightAvailability}
                       onChange={() => setHightAvailability(false)}
                     />
-                    <label className="h-full font-base">Não</label>
+                    <label className="h-full font-base">99%</label>
                   </div>
                 </div>
               </div>
@@ -198,9 +202,9 @@ export default function PriceSection() {
             <div className="flex flex-col items-center gap-4">
               <h4 className="text-base font-semibold txt-primary">Resumo</h4>
               <p className="text-base txt-primary">
-                Prioridade alta:{" "}
+                disponibilidade de SLA: {" "}
                 <b className="txt-secondary">
-                  {hightAvailability ? "Sim" : "Não"}
+                  {hightAvailability ? "99,5%" : "99%"}
                 </b>
               </p>
 

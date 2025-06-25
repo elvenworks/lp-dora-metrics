@@ -31,7 +31,7 @@ export default function HeroSection() {
             </div>
 
             <Button size="lg" className="text-lg px-8 py-4 mx-auto lg:mx-0">
-              Começar grátis
+              Solicite uma demo
             </Button>
           </div>
 

@@ -15,11 +15,12 @@ export default function CTASection() {
               e dados em tempo real.
             </p>
             <Button
+              href="https://wa.me/+5521981828440?text=I'm%20interested%20in%20your%20car%20for%20sale"
               variant="secondary"
               size="lg"
               className="bg-white txt-secondary hover:bg-gray-50 "
             >
-              Começar grátis
+              Solicite uma demo
             </Button>
           </div>
 

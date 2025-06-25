@@ -40,7 +40,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex justify-start space-x-4">
+          <div className="flex justify-end space-x-4">
             <div className=" space-y-4">
               <p className="text-purple-200 font-bold text-2xl">
                 Redes Sociais

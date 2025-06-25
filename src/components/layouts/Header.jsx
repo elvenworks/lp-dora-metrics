@@ -87,7 +87,7 @@ export default function Header() {
             size="lg"
             className="bg-[#6452BF] hover:bg-indigo-700 text-white px-6 py-2 text-sm font-medium"
           >
-            Começar grátis
+            Solicite uma demo
           </Button>
         </div>
       </div>
