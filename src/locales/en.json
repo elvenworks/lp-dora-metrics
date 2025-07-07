@@ -1,0 +1,148 @@
+{
+  "translation": {
+    "headerSection": {
+      "menu": {
+        "about": "About DORA Metrics",
+        "price": "Pricing",
+        "faq": "FAQ",
+        "button": "Request a demo",
+        "dropDown": {
+          "whatIsDora": "What are DORA Metrics",
+          "whyToUse": "Why adopt DORA Metrics with Elven?",
+          "resultsExpected": "Expected results"
+        }
+      }
+    },
+    "heroSection": {
+      "tagline": "DORA Metrics",
+      "title": "Transform your operations with",
+      "subtitle": "The four metrics that help engineering teams lead the way in",
+      "subtitle2": "measuring performance, identifying bottlenecks, and accelerating reliable delivery",
+      "button": "Request a demo"
+    },
+    "metricsSection": {
+      "title": "What are the",
+      "subtitle": "Developed after years of research with thousands of tech teams, the",
+      "subtitle2": "are the four key metrics for software engineering.",
+      "metrics": {
+        "deploymentFrequency": {
+          "title": "Deployment Frequency",
+          "description": "How often your team successfully delivers software."
+        },
+        "leadTimeForChanges": {
+          "title": "Lead Time for Changes",
+          "description": "How long it takes for a change to go from commit to deploy."
+        },
+        "meanTimeToRestore": {
+          "title": "Mean Time to Restore",
+          "description": "How quickly you can recover from a failure."
+        },
+        "changeFailureRate": {
+          "title": "Change Failure Rate",
+          "description": "Measures the percentage of changes that result in failures or issues."
+        }
+      }
+    },
+    "benefitsSection": {
+      "title": "Why adopt the",
+      "title2": "with Elven?",
+      "description": "Our platform provides, processes, and displays the",
+      "description2": "in real-time, friction-free. You gain instant visibility into what needs improvement.",
+      "benefits": {
+        "gitIntegration": {
+          "title": "Connect with GitHub, GitLab, Bitbucket",
+          "description": "Native integration with your development tools"
+        },
+        "realTimeInsights": {
+          "title": "Real-time insights",
+          "description": "Metrics automatically updated with real-time data"
+        },
+        "customizableDashboards": {
+          "title": "Customizable dashboards",
+          "description": "Visuals tailored to your team’s needs"
+        },
+        "elvenPlatformIntegration": {
+          "title": "Elven Platform integration",
+          "description": "Connect with the entire Elven tool ecosystem"
+        },
+        "benchmarking": {
+          "title": "Benchmark comparison",
+          "description": "Compare your performance to industry standards"
+        },
+        "support": {
+          "title": "Expert support",
+          "description": "Guidance from software engineering specialists"
+        }
+      }
+    },
+    "resultsSection": {
+      "title": "Results you can expect",
+      "description": "Track performance in real-time with objective metrics. Get visibility into what's working and where to adjust.",
+      "results": {
+        "lessTimeManualWork": "Less time on manual metrics, more on productivity",
+        "moreTeamsAligned": "Teams releasing more frequently and consistently",
+        "lessFailures": "Reduced major production failures",
+        "fasterResolution": "Issues resolved in less time",
+        "moreTransparency": "Increased transparency and delivery visibility"
+      }
+    },
+    "priceSection": {
+      "title": "Choose the ideal plan for your operation",
+      "description": "Adapt the use of the",
+      "description2": "to your team’s maturity level, with options that grow with your challenges.",
+      "calculator": {
+        "title": "Customize according to your needs",
+        "disponibility": "Choose your SLA availability",
+        "projects": "Connected repositories",
+        "users": "Concurrent users",
+        "syncFrequency": "Concurrent synchronizations"
+      },
+      "plans": {
+        "title": "Estimated monthly cost",
+        "disponibility": "SLA availability:",
+        "repositoryConnected": "Connected repositories:",
+        "users": "Concurrent users:",
+        "syncFrequency": "Concurrent synchronizations:",
+        "warning": "This value is an estimate based on your configuration. For a custom quote, talk to our team.",
+        "button": "Request a quote",
+        "month": "/month",
+        "summary": "Summary"
+      }
+    },
+    "FAQSection": {
+      "title": "Frequently asked questions",
+      "questions": {
+        "isComplex": {
+          "question": "Does it require complex setup?",
+          "answer": "No! Our integration is simple and fast. Connect your repositories and start viewing your metrics in minutes."
+        },
+        "howMetricsAreGenerated": {
+          "question": "How are the metrics collected?",
+          "answer": "We integrate directly with your development tools (GitHub, GitLab, Bitbucket) to collect data automatically, without impacting your operations."
+        },
+        "isMetricsStandardized": {
+          "question": "Are the metrics standardized?",
+          "answer": "Yes, we strictly follow the DORA (DevOps Research and Assessment) standards established by Google Cloud."
+        },
+        "hasHistoryByTeams": {
+          "question": "Can I see historical data by team?",
+          "answer": "Yes, you can view metrics by team, project, or specific period, with full history for trend analysis."
+        },
+        "hasSupport": {
+          "question": "Is there support to interpret the data?",
+          "answer": "Yes, our team of experts is available to help interpret the data and define improvement strategies."
+        }
+      }
+    },
+    "CTASection": {
+      "title": "Take the first step toward high performance",
+      "description": "Start visualizing your engineering metrics clearly and in real time.",
+      "button": "Request a demo"
+    },
+    "footerSection": {
+      "description": "Transforming software engineering with real-time DORA Metrics.",
+      "socialMedia": "Social Media",
+      "allRightsReserved": "© 2024-2025 Elven. All rights reserved."
+    }
+  }
+}

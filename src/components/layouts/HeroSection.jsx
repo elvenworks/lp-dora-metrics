@@ -1,7 +1,10 @@
 import Button from "../common/Button";
 import doraMetricsBanner from "../../assets/dora-metric-banner.png";
+import { useTranslation } from "react-i18next";
 
 export default function HeroSection() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="home"
@@ -17,30 +20,29 @@ export default function HeroSection() {
                 </p>
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold txt-primary leading-[1]">
-                Transforme sua operação com as{" "}
+                {t("heroSection.title")}{" "}
                 <span className="txt-secondary">DORA Metrics</span>
               </h1>
               <p className="text-2xl txt-primary-light font-light">
-                As quatro métricas que ajudam times de engenharia a liderar a{" "}
+                {t("heroSection.subtitle")}{" "}
                 <b className="txt-secondary font-medium">
-                  medir performance, identificar gargalos e acelerar entregas
-                  com confiabilidade
+                  {t("heroSection.subtitle2")}
                 </b>
                 .
               </p>
             </div>
 
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="text-lg px-8 py-4 mx-auto lg:mx-0"
               whatsapp
             >
-              Solicite uma demo
+              {t("heroSection.button")}
             </Button>
           </div>
 
           <div className="relative">
-            <div className="relative overflow-hidden -right-10">
+            <div className="relative overflow-hidden">
               <img
                 src={doraMetricsBanner}
                 alt="DORA Metrics Illustration"
