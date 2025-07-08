@@ -46,7 +46,7 @@ export default function PriceSection() {
 
   const MAX_REPOSITORY = 500;
   const MAX_USERS = 100;
-  const MAX_SYNC = 5;
+  const MAX_SYNC = 10;
 
   const handleNumbersRepository = (e) => {
     const value = e.target.value;
