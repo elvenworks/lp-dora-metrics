@@ -1,34 +1,31 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ExpandedSection from "../common/ExpandedSection";
 
 export default function FAQSection() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
     {
-      question: "Precisa de configuração complexa?",
-      answer:
-        "Não! Nossa integração é simples e rápida. Conecte seus repositórios e comece a visualizar suas métricas em minutos.",
+      question: t("FAQSection.questions.isComplex.question"),
+      answer: t("FAQSection.questions.isComplex.answer"),
     },
     {
-      question: "Como vocês coletam as métricas?",
-      answer:
-        "Integramos diretamente com suas ferramentas de desenvolvimento (GitHub, GitLab, Bitbucket) para coletar dados automaticamente, sem impacto na sua operação.",
+      question: t("FAQSection.questions.howMetricsAreGenerated.question"),
+      answer: t("FAQSection.questions.howMetricsAreGenerated.answer"),
     },
     {
-      question: "As métricas seguem algum padrão?",
-      answer:
-        "Sim, seguimos rigorosamente os padrões DORA (DevOps Research and Assessment) estabelecidos pelo Google Cloud.",
+      question: t("FAQSection.questions.isMetricsStandardized.question"),
+      answer: t("FAQSection.questions.isMetricsStandardized.answer"),
     },
     {
-      question: "É possível ver histórico por time?",
-      answer:
-        "Sim, você pode visualizar métricas por equipe, projeto ou período específico, com histórico completo para análise de tendências.",
+      question: t("FAQSection.questions.hasHistoryByTeams.question"),
+      answer: t("FAQSection.questions.hasHistoryByTeams.answer"),
     },
     {
-      question: "Tenho suporte para interpretar os dados?",
-      answer:
-        "Sim, nossa equipe de especialistas está disponível para ajudar na interpretação dos dados e definição de estratégias de melhoria.",
+      question: t("FAQSection.questions.hasSupport.question"),
+      answer: t("FAQSection.questions.hasSupport.answer"),
     },
   ];
 
@@ -37,7 +34,7 @@ export default function FAQSection() {
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold txt-primary">
-            Dúvidas comuns
+            {t("FAQSection.title")}
           </h2>
         </div>
 

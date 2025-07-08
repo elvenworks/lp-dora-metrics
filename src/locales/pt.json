@@ -1,0 +1,148 @@
+{
+  "translation": {
+    "headerSection": {
+      "menu": {
+        "about": "Sobre DORA Metrics",
+        "price": "Preços",
+        "faq": "Dúvidas",
+        "button": "Solicite uma demo",
+        "dropDown": {
+          "whatIsDora": "O que são DORA Metrics",
+          "whyToUse": "Por que adotar as DORA Metrics com a Elven?",
+          "resultsExpected": "Resultados que você pode esperar"
+        }
+      }
+    },
+    "heroSection": {
+      "tagline": "DORA Metrics",
+      "title": "Transforme sua operação com as",
+      "subtitle": " As quatro métricas que ajudam times de engenharia a liderar a",
+      "subtitle2": "medir performance, identificar gargalos e acelerar entregas com confiabilidade",
+      "button": "Solicite uma demo"
+    },
+    "metricsSection": {
+      "title": "O que são as",
+      "subtitle": "Desenvolvidas após anos de pesquisa com milhares de times de tecnologia, as",
+      "subtitle2": "são as quatro principais métricas para engenharia de software.",
+      "metrics": {
+        "deploymentFrequency": {
+          "title": "Frequência de Deploy",
+          "description": "Quantas vezes seu time entrega software com sucesso."
+        },
+        "leadTimeForChanges": {
+          "title": "Lead Time para Mudanças",
+          "description": "Quanto tempo leva para uma mudança ir do commit ao deploy."
+        },
+        "meanTimeToRestore": {
+          "title": "Tempo Médio de Recuperação",
+          "description": "O quão rápido você consegue se recuperar de uma falha."
+        },
+        "changeFailureRate": {
+          "title": "Taxa de Falhas de Mudança",
+          "description": "Mede a porcentagem de mudanças que resultam em falhas ou problemas."
+        }
+      }
+    },
+    "benefitsSection": {
+      "title": "Por que adotar as",
+      "title2": "com a Elven?",
+      "description": "Nossa plataforma oferece, processa e apresenta as",
+      "description2": "em tempo real, sem fricção. Você obtém visibilidade instantânea do que precisa melhorar.",
+      "benefits": {
+        "gitIntegration": {
+          "title": "Consulta com GitHub, GitLab, Bitbucket",
+          "description": "Integração nativa com suas ferramentas de desenvolvimento"
+        },
+        "realTimeInsights": {
+          "title": "Insights em tempo real",
+          "description": "Métricas atualizadas automaticamente com dados em tempo real"
+        },
+        "customizableDashboards": {
+          "title": "Dashboards personalizáveis",
+          "description": "Visualizações adaptadas às necessidades da sua equipe"
+        },
+        "elvenPlatformIntegration": {
+          "title": "Integração com a Elven Platform",
+          "description": "Conecte com todo o ecossistema de ferramentas da Elven"
+        },
+        "benchmarking": {
+          "title": "Comparação com benchmarks",
+          "description": "Compare sua performance com padrões da indústria"
+        },
+        "support": {
+          "title": "Suporte de especialistas",
+          "description": "Orientação de especialistas em engenharia de software"
+        }
+      }
+    },
+    "resultsSection": {
+      "title": "Resultados que você pode esperar",
+      "description": "Acompanhe a performance em tempo real com métricas objetivas. Tenha visibilidade do que está funcionando e onde ajustar.",
+      "results": {
+        "lessTimeManualWork": "Menos tempo com métricas manuais e mais produção",
+        "moreTeamsAligned": "Times que fazem releases baseados com mais frequência",
+        "lessFailures": "Reduzir falhas graves em produção",
+        "fasterResolution": "Problemas resolvidos em menos tempo",
+        "moreTransparency": "Mais transparência e visibilidade na entrega"
+      }
+    },
+    "priceSection": {
+      "title": "Escolha o plano ideal para sua operação",
+      "description": "Adapte o uso do",
+      "description2": "à maturidade da sua equipe, com opções que crescem junto com os seus desafios.",
+      "calculator": {
+        "title": "Configure conforme suas necessidades",
+        "disponibility": "Escolha sua disponibilidade de SLA",
+        "projects": "Repositórios conectados",
+        "users": "Usuários simultâneos",
+        "syncFrequency": "Sincronizações simultâneas"
+      },
+      "plans": {
+        "title": "Valor estimado mensal",
+        "disponibility": "disponibilidade de SLA:",
+        "repositoryConnected": "Repositórios conectados:",
+        "users": "Usuários simultâneos:",
+        "syncFrequency": "Sincronizações simultâneas:",
+        "warning": "Este valor é uma estimativa com base nas suas configurações. Para um orçamento customizado, fale com nosso time.",
+        "button": "Solicitar orçamento",
+        "month": "/mês",
+        "summary": "Resumo"
+      }
+    },
+    "FAQSection": {
+      "title": "Dúvidas comuns",
+      "questions": {
+        "isComplex": {
+          "question": "Precisa de configuração complexa?",
+          "answer": "Não! Nossa integração é simples e rápida. Conecte seus repositórios e comece a visualizar suas métricas em minutos."
+        },
+        "howMetricsAreGenerated": {
+          "question": "Como vocês coletam as métricas?",
+          "answer": "Integramos diretamente com suas ferramentas de desenvolvimento (GitHub, GitLab, Bitbucket) para coletar dados automaticamente, sem impacto na sua operação."
+        },
+        "isMetricsStandardized": {
+          "question": "As métricas seguem algum padrão?",
+          "answer": "Sim, seguimos rigorosamente os padrões DORA (DevOps Research and Assessment) estabelecidos pelo Google Cloud."
+        },
+        "hasHistoryByTeams": {
+          "question": "É possível ver histórico por time?",
+          "answer": "Sim, você pode visualizar métricas por equipe, projeto ou período específico, com histórico completo para análise de tendências."
+        },
+        "hasSupport": {
+          "question": "Tenho suporte para interpretar os dados?",
+          "answer": "Sim, nossa equipe de especialistas está disponível para ajudar na interpretação dos dados e definição de estratégias de melhoria."
+        }
+      }
+    },
+    "CTASection": {
+      "title": "Dê o primeiro passo rumo à alta performance",
+      "description": "Comece agora a visualizar suas métricas de engenharia com clareza e dados em tempo real.",
+      "button": "Solicite uma demo"
+    },
+    "footerSection": {
+      "description": "Transformando a engenharia de software com DORA Metrics em tempo real.",
+      "socialMedia": "Redes Sociais",
+      "allRightsReserved": "© 2024-2025 Elven. Todos os direitos reservados."
+    }
+  }
+}

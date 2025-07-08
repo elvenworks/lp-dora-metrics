@@ -1,4 +1,5 @@
 import { LayoutDashboard } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import GitHub from "../icons/Github";
 import Idea from "../icons/Idea";
 import ElvenShield from "../icons/ElvenShield";
@@ -7,37 +8,42 @@ import CorrectShild from "../icons/CorrectShild";
 import Card from "../common/Card";
 
 export default function BenefitsSection() {
+  const { t } = useTranslation();
+
   const benefits = [
     {
       icon: <GitHub />,
-      title: "Consulta com GitHub, GitLab, Bitbucket",
-      description: "Integração nativa com suas ferramentas de desenvolvimento",
+      title: t("benefitsSection.benefits.gitIntegration.title"),
+      description: t("benefitsSection.benefits.gitIntegration.description"),
     },
     {
       icon: <Idea />,
-      title: "Insights em tempo real",
-      description:
-        "Métricas atualizadas automaticamente com dados em tempo real",
+      title: t("benefitsSection.benefits.realTimeInsights.title"),
+      description: t("benefitsSection.benefits.realTimeInsights.description"),
     },
     {
       icon: <LayoutDashboard className="w-10 h-10" fill="#fff" />,
-      title: "Dashboards personalizáveis",
-      description: "Visualizações adaptadas às necessidades da sua equipe",
+      title: t("benefitsSection.benefits.customizableDashboards.title"),
+      description: t(
+        "benefitsSection.benefits.customizableDashboards.description"
+      ),
     },
     {
       icon: <ElvenShield />,
-      title: "Integração com a Elven Platform",
-      description: "Conecte com todo o ecossistema de ferramentas da Elven",
+      title: t("benefitsSection.benefits.elvenPlatformIntegration.title"),
+      description: t(
+        "benefitsSection.benefits.elvenPlatformIntegration.description"
+      ),
     },
     {
       icon: <Statistic />,
-      title: "Comparação com benchmarks",
-      description: "Compare sua performance com padrões da indústria",
+      title: t("benefitsSection.benefits.benchmarking.title"),
+      description: t("benefitsSection.benefits.benchmarking.description"),
     },
     {
       icon: <CorrectShild />,
-      title: "Suporte de especialistas",
-      description: "Orientação de especialistas em engenharia de software",
+      title: t("benefitsSection.benefits.support.title"),
+      description: t("benefitsSection.benefits.support.description"),
     },
   ];
 
@@ -49,15 +55,15 @@ export default function BenefitsSection() {
       <div className="container mx-auto px-4">
         <div className="flex items-center flex-col gap-4 text-center space-y-4 mb-12">
           <h2 className="text-3xl w-full lg:text-4xl font-bold txt-primary">
-            Por que adotar as <b className="txt-secondary">DORA Metrics</b> com
-            a Elven?
+            {t("benefitsSection.title")}{" "}
+            <b className="txt-secondary">DORA Metrics</b>{" "}
+            {t("benefitsSection.title2")}
           </h2>
 
           <p className="text-2xl w-full  txt-primary-light">
-            Nossa plataforma oferece, processa e apresenta as{" "}
-            <b className="txt-secondary">DORA Metrics</b> em tempo real, sem
-            fricção. Você obtém visibilidade instantânea do que precisa
-            melhorar.
+            {t("benefitsSection.description")}{" "}
+            <b className="txt-secondary">DORA Metrics</b>{" "}
+            {t("benefitsSection.description2")}
           </p>
         </div>
 

@@ -3,8 +3,11 @@ import { Facebook } from "lucide-react";
 import { Youtube } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import elvenLogoFooter from "../../assets/elven-logo-footer.svg";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   const socialLinks = [
     {
       icon: <Linkedin className="w-auto h-auto" />,
@@ -35,15 +38,14 @@ export default function Footer() {
               <img src={elvenLogoFooter} alt="Elven" className="h-12 w-auto" />
             </div>
             <p className="text-purple-100 max-w-md">
-              Transformando a engenharia de software com DORA Metrics em tempo
-              real.
+              {t("footerSection.description")}
             </p>
           </div>
 
           <div className="flex justify-end space-x-4">
             <div className=" space-y-4">
               <p className="text-purple-200 font-bold text-2xl">
-                Redes Sociais
+                {t("footerSection.socialMedia")}
               </p>
               <div className="flex space-x-3">
                 {socialLinks.map((link, index) => (
@@ -63,7 +65,7 @@ export default function Footer() {
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-purple-200 font-light text-base font-button">
-            © 2024-2025 Elven. Todos os direitos reservados.
+            {t("footerSection.allRightsReserved")}
           </p>
         </div>
       </div>

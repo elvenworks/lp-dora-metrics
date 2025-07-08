@@ -1,14 +1,17 @@
 import { Check } from "lucide-react";
 import metrisUser from "../../assets/metrics-users.png";
 import doraMetricsTable from "../../assets/metrics-table.png";
+import { useTranslation } from "react-i18next";
 
 export default function ResultsSection() {
+  const { t } = useTranslation();
+
   const results = [
-    "Menos tempo com métricas manuais e mais produção",
-    "Times que fazem releases baseados com mais frequência",
-    "Reduzir falhas graves em produção",
-    "Problemas resolvidos em menos tempo",
-    "Mais transparência e visibilidade na entrega",
+    t("resultsSection.results.lessTimeManualWork"),
+    t("resultsSection.results.moreTeamsAligned"),
+    t("resultsSection.results.lessFailures"),
+    t("resultsSection.results.fasterResolution"),
+    t("resultsSection.results.moreTransparency"),
   ];
 
   return (
@@ -16,11 +19,10 @@ export default function ResultsSection() {
       <div className="container mx-auto px-4 mt-20 mb-20">
         <div className="flex items-center flex-col space-y-4 mb-20 lg:mb-36">
           <h2 className="text-3xl lg:text-4xl text-center font-bold txt-primary">
-            Resultados que você pode esperar
+            {t("resultsSection.title")}
           </h2>
           <p className="text-2xl text-center font-light max-w-4xl txt-primary-light">
-            Acompanhe a performance em tempo real com métricas objetivas. Tenha
-            visibilidade do que está funcionando e onde ajustar.
+            {t("resultsSection.description")}
           </p>
         </div>
 
