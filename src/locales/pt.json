@@ -93,14 +93,14 @@
       "calculator": {
         "title": "Configure conforme suas necessidades",
         "disponibility": "Escolha sua disponibilidade de SLA",
-        "projects": "Repositórios conectados",
+        "projects": "Projetos conectados",
         "users": "Usuários simultâneos",
         "syncFrequency": "Sincronizações simultâneas"
       },
       "plans": {
         "title": "Valor estimado mensal",
         "disponibility": "disponibilidade de SLA:",
-        "repositoryConnected": "Repositórios conectados:",
+        "repositoryConnected": "Projetos conectados:",
         "users": "Usuários simultâneos:",
         "syncFrequency": "Sincronizações simultâneas:",
         "warning": "Este valor é uma estimativa com base nas suas configurações. Para um orçamento customizado, fale com nosso time.",

@@ -93,14 +93,14 @@
       "calculator": {
         "title": "Customize according to your needs",
         "disponibility": "Choose your SLA availability",
-        "projects": "Connected repositories",
+        "projects": "Connected projects",
         "users": "Concurrent users",
         "syncFrequency": "Concurrent synchronizations"
       },
       "plans": {
         "title": "Estimated monthly cost",
         "disponibility": "SLA availability:",
-        "repositoryConnected": "Connected repositories:",
+        "repositoryConnected": "Connected projects:",
         "users": "Concurrent users:",
         "syncFrequency": "Concurrent synchronizations:",
         "warning": "This value is an estimate based on your configuration. For a custom quote, talk to our team.",
@@ -114,7 +114,7 @@
       "questions": {
         "isComplex": {
           "question": "Does it require complex setup?",
-          "answer": "No! Our integration is simple and fast. Connect your repositories and start viewing your metrics in minutes."
+          "answer": "No! Our integration is simple and fast. Connect your projects and start viewing your metrics in minutes."
         },
         "howMetricsAreGenerated": {
           "question": "How are the metrics collected?",
